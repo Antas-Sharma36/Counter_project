@@ -2,6 +2,11 @@ let num = 0;
 const value = document.querySelector(".value");
 const btns = document.querySelectorAll(".btn");
 
+function play() {
+    var audio = new Audio(
+'https://raw.githubusercontent.com/Antas-Sharma36/Counter_project/main/beep.mp3');
+    audio.play();
+}
 
 btns.forEach((btn)=>{
 
@@ -15,6 +20,7 @@ btns.forEach((btn)=>{
         } else {
             num = 0;
         }
+        play();
         value.textContent = num;
 
         if ( num > 0 ){
